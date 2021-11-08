@@ -1,0 +1,17 @@
+#Greeengrass Group definition file
+Group:
+  name: GG_Object_Detection
+Cores:
+  - name: GG_Object_Detection_Core
+    key_path: ./certs
+    config_path: ./config
+    SyncShadow: True
+
+# Uncomment below section as you add ML resource
+
+Resources:
+  - Name: MyObjectDetectionModel
+    Id: MyObjectDetectionModel
+    S3MachineLearningModelResourceData:
+     DestinationPath: /ml/od/
+     S3Uri: s3://bucketmigliore/deploy_model.tar.gz
