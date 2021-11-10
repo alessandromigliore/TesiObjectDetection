@@ -56,7 +56,7 @@ def main():
          break
      
      if i % 10 == 0:
-     	cv2.imwrite('/home/alessandro/Scrivania/buffers3/frame'+str(i)+'.jpg',frame)
+     	cv2.imwrite('#PATH FOLDER/frame'+str(i)+'.jpg',frame)
      	client = boto3.client('s3', region_name='eu-west-1')
      	client.upload_file('#PATH FOLDER/frame'+str(i)+'.jpg', '#BUCKET' ,'images/frame'+str(i)+'.jpg')
      i+=1
