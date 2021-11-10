@@ -89,8 +89,8 @@ def url_to_image(URL):
 def create_presigned_url(bucket_name, bucket_key, expiration=3600, signature_version=s3_signature['v4']):
 
     s3_client = boto3.client('s3',
-                         aws_access_key_id="AKIAQQY3A3MR2V7ZJTHD",
-                         aws_secret_access_key="56j0TYi2JSRIF00WERsU0fPQ5KDF+CpDPgInCluR",
+                         aws_access_key_id=#YOUR ACCESS KEY ID",
+                         aws_secret_access_key=#YOUR SECRET ACCESS KEY,
                          config=Config(signature_version=signature_version),
                          region_name='eu-west-1'
                          )
