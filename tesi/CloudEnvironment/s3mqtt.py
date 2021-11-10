@@ -12,7 +12,7 @@ import urllib
 
 
 def main():
- video_fname = "/home/alessandro/Scrivania/buffers3/demo_1000.avi"
+ video_fname = '#PATH FOLDER/VIDEO NAME'
  camera_id = 0
  
  cap = cv2.VideoCapture(camera_id)
@@ -48,7 +48,7 @@ def main():
 
 
  # Opens the Video file
- cap2= cv2.VideoCapture('/home/alessandro/Scrivania/buffers3/demo_1000.avi')
+ cap2= cv2.VideoCapture('#PATH FOLDER /VIDEO NAME')
  i=0
  while(cap2.isOpened()):
      ret, frame = cap2.read()
@@ -58,7 +58,7 @@ def main():
      if i % 10 == 0:
      	cv2.imwrite('/home/alessandro/Scrivania/buffers3/frame'+str(i)+'.jpg',frame)
      	client = boto3.client('s3', region_name='eu-west-1')
-     	client.upload_file('/home/alessandro/Scrivania/buffers3/frame'+str(i)+'.jpg', 'bucketmigliore','images/frame'+str(i)+'.jpg')
+     	client.upload_file('#PATH FOLDER/frame'+str(i)+'.jpg', '#BUCKET' ,'images/frame'+str(i)+'.jpg')
      i+=1
  
  cap2.release()
