@@ -1,0 +1,5 @@
+mxnet
+opencv-python
+botocore
+boto3
+
