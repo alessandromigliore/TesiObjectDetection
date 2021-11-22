@@ -12,3 +12,5 @@
 |   └── hyperparams.json            #hyper parameters 
 └──
 ```
+
+https://www.linkedin.com/pulse/machine-learning-object-detection-model-deployed-cloud-ferrara
